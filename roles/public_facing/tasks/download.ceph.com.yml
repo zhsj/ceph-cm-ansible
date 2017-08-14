@@ -68,4 +68,10 @@
     minute: "0"
     job: "/usr/libexec/make_timestamp"
 
+- name: Cron entry for deleting rsync dotfiles
+  cron:
+    name: "Delete rsync dotfiles"
+    hour: "0"
+    job: 'find /data/download.ceph.com/www -type f -name ".[^.]*" -delete'
+
 - include: letsencrypt_nginx.yml
