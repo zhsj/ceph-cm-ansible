@@ -64,7 +64,7 @@
     name: "{{ teuthology_user }}"
     # group sets the primary group, while groups just adds
     # the user to the specified group or groups.
-    groups: fuse,kvm,disk
+    groups: fuse,disk
     append: yes
 
 - import_tasks: static_ip.yml
@@ -74,3 +74,4 @@
   service:
     name: apache2
     state: stopped
+  ignore_errors: yes

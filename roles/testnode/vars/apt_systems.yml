@@ -17,7 +17,8 @@ ceph_packages_to_remove:
   - ceph-fs-common-dbg
   - ceph-fs-common
 
-packages: []
+packages:
+    - lvm2
 common_packages: []
 
 apt_repos: []
